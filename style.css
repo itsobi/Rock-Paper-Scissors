@@ -34,7 +34,14 @@ header h4 {
   background: orange;
 }
 
-h4 {
+#content-head {
   text-align: center;
   font-family: "Merriweather", serif;
+  padding-top: 20px;
+}
+
+p {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 40px;
 }
