@@ -40,7 +40,13 @@ header h4 {
   padding-top: 20px;
 }
 
-p {
+#computer-choice {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 40px;
+}
+
+#result {
   text-align: center;
   font-family: "Merriweather", serif;
   font-size: 40px;
