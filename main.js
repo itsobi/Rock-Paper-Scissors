@@ -1,55 +1,61 @@
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
 const displayComputerChoice = document.getElementById("computer-choice");
-const result = document.getElementById("result");
-const rock_div = document.getElementById('rock');
-const paper_div = document.getElementById('paper');
-const scissors_div = document.getElementById('scissors');
+const displayResult = document.getElementById("result");
+
+function main() {
+    rockButton.addEventListener("click", function() {
+        playGame("rock");
+    })
+
+    paperButton.addEventListener("click", function() {
+        playGame("paper");
+    })
+
+    scissorsButton.addEventListener("click", function() {
+        playGame("scissors");
+    })
+}
+main();
+
+
+
+function playGame(userChoice) {
+   const computerChoice = getComputerChoice();
+   displayComputerChoice.innerHTML = "Computer chooses " + getComputerChoice();
+
+   if (getComputerChoice() === userChoice) {
+       displayResult.innerHTML = "It's a draw!";
+   }
+     if (getComputerChoice() === "rock" && userChoice === "paper") {
+       displayResult.innerHTML = "You win!";
+   }
+   if (getComputerChoice() === "rock" && userChoice === "scissors") {
+    displayResult.innerHTML = "You lose!";
+    }
+    if (getComputerChoice() === "paper" && userChoice === "scissors") {
+        displayResult.innerHTML = "You win!";
+    }
+     if (getComputerChoice() === "paper" && userChoice === "rock") {
+       displayResult.innerHTML = "You lost!";
+   }
+     if (getComputerChoice() === "scissors" && userChoice === "paper") {
+       displayResult.innerHTML = "You lose!";
+   }
+   if (getComputerChoice() === "scissors" && userChoice === "rock") {
+    displayResult.innerHTML = "You win!";
+    }
+   
+}
+playGame();
 
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
     const randomNum = Math.floor(Math.random() * 3);
     return choices[randomNum];
 }
-console.log(getComputerChoice);
 
 
-function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    switch (userChoice + computerChoice) {
-       case "rockscissors":
-        case "paperrock":
-        case "scissorspaper":
-            displayComputerChoice.innerHTML = "Computer chooses " + computerChoice;
-            result.innerHTML = "You win!"
-            break;
-        case "rockpaper":
-        case "paperscissor":
-        case  "scissorsrock":
-            displayComputerChoice.innerHTML = "Computer chooses " + computerChoice;
-            result.innerHTML = "You lose!"
-            break;
-        case "rockrock":
-        case "paperpaper":
-        case  "scissorsscissors":
-            displayComputerChoice.innerHTML = "Computer chooses  " + computerChoice;
-            result.innerHTML = "It's a draw!"
-            break;
-     
-    }
-}
 
 
-function main() {
-    rock_div.addEventListener("click", function() {
-        game("rock");
-    })
-
-    paper_div.addEventListener("click", function() {
-        game("paper");
-    })
-
-    scissors_div.addEventListener("click", function() {
-        game("scissors");
-    })
-}
-
-main();
