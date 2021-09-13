@@ -23,27 +23,34 @@ main();
 
 function playGame(userChoice) {
    const computerChoice = getComputerChoice();
-   displayComputerChoice.innerHTML = "Computer chooses " + computerChoice;
+
 
    if (computerChoice === userChoice) {
-       displayResult.innerHTML = "It's a draw!";
+     displayComputerChoice = displayResult.innerHTML; 
+    displayResult.innerHTML = "It's a draw!";
    }
      if (computerChoice === "rock" && userChoice === "paper") {
-       displayResult.innerHTML = "You win!";
+        displayComputerChoice.innerHTML = computerChoice;
+        displayResult.innerHTML = "You win!";
    }
    if (computerChoice === "rock" && userChoice === "scissors") {
+    displayComputerChoice.innerHTML = computerChoice;    
     displayResult.innerHTML = "You lose!";
     }
     if (computerChoice === "paper" && userChoice === "scissors") {
+        displayComputerChoice.innerHTML = computerChoice;
         displayResult.innerHTML = "You win!";
     }
-     if (computerChoice === "paper" && userChoice === "rock") {
-       displayResult.innerHTML = "You lost!";
-   }
+    if (computerChoice === "paper" && userChoice === "rock") {
+        displayComputerChoice.innerHTML = computerChoice;
+        displayResult.innerHTML = "You lose!";
+    }
      if (computerChoice === "scissors" && userChoice === "paper") {
-       displayResult.innerHTML = "You lose!";
+        displayComputerChoice.innerHTML = computerChoice;
+        displayResult.innerHTML = "You lose!";
    }
    if (computerChoice === "scissors" && userChoice === "rock") {
+    displayComputerChoice.innerHTML = computerChoice;
     displayResult.innerHTML = "You win!";
     }
    
