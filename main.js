@@ -23,27 +23,27 @@ main();
 
 function playGame(userChoice) {
    const computerChoice = getComputerChoice();
-   displayComputerChoice.innerHTML = "Computer chooses " + getComputerChoice();
+   displayComputerChoice.innerHTML = "Computer chooses " + computerChoice;
 
-   if (getComputerChoice() === userChoice) {
+   if (computerChoice === userChoice) {
        displayResult.innerHTML = "It's a draw!";
    }
-     if (getComputerChoice() === "rock" && userChoice === "paper") {
+     if (computerChoice === "rock" && userChoice === "paper") {
        displayResult.innerHTML = "You win!";
    }
-   if (getComputerChoice() === "rock" && userChoice === "scissors") {
+   if (computerChoice === "rock" && userChoice === "scissors") {
     displayResult.innerHTML = "You lose!";
     }
-    if (getComputerChoice() === "paper" && userChoice === "scissors") {
+    if (computerChoice === "paper" && userChoice === "scissors") {
         displayResult.innerHTML = "You win!";
     }
-     if (getComputerChoice() === "paper" && userChoice === "rock") {
+     if (computerChoice === "paper" && userChoice === "rock") {
        displayResult.innerHTML = "You lost!";
    }
-     if (getComputerChoice() === "scissors" && userChoice === "paper") {
+     if (computerChoice === "scissors" && userChoice === "paper") {
        displayResult.innerHTML = "You lose!";
    }
-   if (getComputerChoice() === "scissors" && userChoice === "rock") {
+   if (computerChoice === "scissors" && userChoice === "rock") {
     displayResult.innerHTML = "You win!";
     }
    
@@ -55,6 +55,7 @@ function getComputerChoice() {
     const randomNum = Math.floor(Math.random() * 3);
     return choices[randomNum];
 }
+
 
 
 
