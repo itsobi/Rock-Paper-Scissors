@@ -19,6 +19,12 @@ function main() {
 }
 main();
 
+function getComputerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    const randomNum = Math.floor(Math.random() * 3);
+    return choices[randomNum];
+}
+
 
 
 function playGame(userChoice) {
@@ -57,11 +63,7 @@ function playGame(userChoice) {
 }
 playGame();
 
-function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
-    const randomNum = Math.floor(Math.random() * 3);
-    return choices[randomNum];
-}
+
 
 
 
