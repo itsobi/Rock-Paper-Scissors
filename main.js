@@ -32,36 +32,36 @@ function playGame(userChoice) {
 
 
    if (computerChoice === userChoice) {
-     displayComputerChoice = displayResult.innerHTML; 
+    displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice; 
     displayResult.innerHTML = "It's a draw!";
    }
      if (computerChoice === "rock" && userChoice === "paper") {
-        displayComputerChoice.innerHTML = computerChoice;
+        displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice;
         displayResult.innerHTML = "You win!";
    }
    if (computerChoice === "rock" && userChoice === "scissors") {
-    displayComputerChoice.innerHTML = computerChoice;    
+    displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice;    
     displayResult.innerHTML = "You lose!";
     }
     if (computerChoice === "paper" && userChoice === "scissors") {
-        displayComputerChoice.innerHTML = computerChoice;
+        displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice;
         displayResult.innerHTML = "You win!";
     }
     if (computerChoice === "paper" && userChoice === "rock") {
-        displayComputerChoice.innerHTML = computerChoice;
+        displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice;
         displayResult.innerHTML = "You lose!";
     }
      if (computerChoice === "scissors" && userChoice === "paper") {
-        displayComputerChoice.innerHTML = computerChoice;
+        displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice;
         displayResult.innerHTML = "You lose!";
    }
    if (computerChoice === "scissors" && userChoice === "rock") {
-    displayComputerChoice.innerHTML = computerChoice;
+    displayComputerChoice.innerHTML = "Computer chooses: " + computerChoice;
     displayResult.innerHTML = "You win!";
     }
    
 }
-playGame();
+
 
 
 
